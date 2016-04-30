@@ -4,7 +4,7 @@
 #
 Name     : ncompress
 Version  : 4.2.4.4
-Release  : 11
+Release  : 12
 URL      : http://downloads.sourceforge.net/ncompress/ncompress-4.2.4.4.tar.gz
 Source0  : http://downloads.sourceforge.net/ncompress/ncompress-4.2.4.4.tar.gz
 Summary  : No detailed summary available
