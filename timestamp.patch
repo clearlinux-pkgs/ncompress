@@ -24,3 +24,14 @@
  		echo ""
  		echo ${n} "Press return to continue${c}"
  		read dummy
+--- ncompress-4.2.4.4/Makefile.def~	2010-09-10 03:42:33.000000000 +0000
++++ ncompress-4.2.4.4/Makefile.def	2017-01-16 22:19:00.704079296 +0000
+@@ -38,7 +38,7 @@
+ 
+ 
+ compress:	Makefile compress42.c patchlevel.h
+-	$(CC) -o compress $(options) "-DCOMPILE_DATE=\"`date`\"" compress42.c $(LBOPT)
++	$(CC) -o compress $(options) "-DCOMPILE_DATE=\"date\"" compress42.c $(LBOPT)
+ 
+ install:	compress
+ 		[ -f $(DESTDIR)$(BINDIR)/compress ] && \
