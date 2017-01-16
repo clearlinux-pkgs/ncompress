@@ -4,7 +4,7 @@
 #
 Name     : ncompress
 Version  : 4.2.4.4
-Release  : 12
+Release  : 13
 URL      : http://downloads.sourceforge.net/ncompress/ncompress-4.2.4.4.tar.gz
 Source0  : http://downloads.sourceforge.net/ncompress/ncompress-4.2.4.4.tar.gz
 Summary  : No detailed summary available
@@ -22,9 +22,12 @@ for compressing files.
 %setup -q -n ncompress-4.2.4.4
 
 %build
-make V=1 %{?_smp_mflags}
+export LANG=C
+export SOURCE_DATE_EPOCH=1484604529
+make V=1  %{?_smp_mflags}
 
 %install
+export SOURCE_DATE_EPOCH=1484604529
 rm -rf %{buildroot}
 %make_install
 
