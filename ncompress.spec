@@ -4,12 +4,13 @@
 #
 Name     : ncompress
 Version  : 4.2.4.4
-Release  : 13
+Release  : 14
 URL      : http://downloads.sourceforge.net/ncompress/ncompress-4.2.4.4.tar.gz
 Source0  : http://downloads.sourceforge.net/ncompress/ncompress-4.2.4.4.tar.gz
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : Public-Domain
+Patch1: timestamp.patch
 
 %description
 This is version 4.2 of (N)compress (an improved version of compress 4.1).
@@ -20,14 +21,15 @@ for compressing files.
 
 %prep
 %setup -q -n ncompress-4.2.4.4
+%patch1 -p1
 
 %build
 export LANG=C
-export SOURCE_DATE_EPOCH=1484604529
+export SOURCE_DATE_EPOCH=1484604925
 make V=1  %{?_smp_mflags}
 
 %install
-export SOURCE_DATE_EPOCH=1484604529
+export SOURCE_DATE_EPOCH=1484604925
 rm -rf %{buildroot}
 %make_install
 
